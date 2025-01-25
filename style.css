@@ -1,0 +1,647 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  font-family: "Poppins", "serif";
+  color: #373a3c;
+  overflow-x: hidden;
+}
+
+a {
+  transition: 0.5s;
+}
+
+/*side bar*/
+
+#sidebar {
+  position: fixed;
+  height: 100%;
+  width: 300px;
+  background-color: #ac9794;
+  padding-top: 40px;
+}
+
+#sidebar h1 {
+  color: #fff;
+  font-size: 32px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+#sidebar a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+#sidebar a:hover {
+  color: #f4ef5e;
+}
+
+#sidebar li {
+  padding: 20px;
+}
+
+.sidebar-container {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+}
+
+.logo-doceria {
+  width: 90px;
+  height: 90px;
+  display: block;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*conteúdo*/
+
+.content {
+  position: absolute;
+  left: 300px;
+  width: calc(100% - 300px);
+}
+
+.content h1,
+.content h2 {
+  color: #ac9794;
+  margin-bottom: 30px;
+}
+
+.content h1 {
+  font-size: 48px;
+}
+
+.content h2 {
+  font-size: 35px;
+}
+
+section {
+  padding-left: 50px !important;
+}
+
+/* bem vindo */
+
+#sessao-bemvindo {
+  padding-left: 0 !important;
+}
+
+.sessao-bemvindo-content {
+  padding-left: 50px;
+}
+
+#sessao-bemvindo .banner {
+  height: 500px;
+  background-image: url(img/café4.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+#sessao-bemvindo h1 {
+  margin-top: 70px;
+}
+
+#sessao-bemvindo::after,
+#sessao-sobre::after {
+  content: "";
+  display: block;
+  clear: both;
+  margin-bottom: 100px;
+}
+
+.sessao-minibanner {
+  width: 300px;
+  height: 400px;
+  border-radius: 5px;
+  background-image: url(img/caféposter.jpg);
+  background-position: center;
+  background-size: cover;
+  float: left;
+}
+
+.sessao-descricao {
+  position: absolute;
+  left: 370px;
+  padding-right: 30px;
+}
+
+.sessao-descricao p {
+  line-height: 2;
+  font-size: 16px;
+  margin-bottom: 30px;
+  margin-left: 25px;
+}
+
+.sessao-bemvindo-btn,
+form input [type="submit"] {
+  background-color: #ac9794;
+  color: #fff;
+  text-decoration: none;
+  padding: 20px 40px;
+  transition: 0.5s;
+  display: block;
+  width: 100px;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  margin-left: 25px;
+}
+
+.sessao-bemvindo-btn:hover,
+form input [type="submit"]:hover {
+  background-color: #279016;
+}
+
+/*sessao sobre*/
+
+#sessao-sobre .sessao-minibanner {
+  float: right;
+  margin-right: 50px;
+  background-image: url(img/banner4.jpg);
+}
+
+#sessao-sobre .sessao-descricao {
+  position: absolute;
+  left: 25px;
+  width: calc(100% - 400px);
+}
+
+/* galerias */
+
+.banner-galeria {
+  background-position: center;
+  background-size: cover;
+  display: inline-block;
+  height: 200px;
+}
+
+h1 {
+  overflow: hidden;
+}
+
+h2 {
+  overflow: hidden;
+}
+
+img {
+  overflow: hidden;
+}
+
+#sessao-doces1,
+#sessao-doces2,
+#sessao-doces3,
+#sessao-doces4 {
+  padding-right: 50px;
+  margin-bottom: 50px;
+  overflow: hidden;
+}
+
+.doces1-imgs {
+  width: 18.8%;
+  margin-left: 0.5%;
+  margin-right: 0.5%;
+  border-radius: 5px;
+  transition: transform 0.2s ease, filter 0.3s ease;
+}
+
+#sessao-doces1:hover .doces1-imgs:not(:hover) {
+  filter: blur(1.3px);
+}
+
+.doces1-imgs:hover {
+  transform: scale(1.16);
+  filter: none;
+}
+
+#img1 {
+  background-image: url(img/galeria1.jpg);
+  margin-left: 0;
+}
+#img2 {
+  background-image: url(img/galeria2.jpg);
+}
+#img3 {
+  background-image: url(img/galeria3.jpg);
+}
+#img4 {
+  background-image: url(img/galeria4.jpg);
+}
+#img5 {
+  background-image: url(img/galeria5.jpg);
+  margin-right: 0;
+}
+
+.doces2-imgs {
+  width: 32.3%;
+  margin-left: 0.5%;
+  margin-right: 0.5%;
+  border-radius: 5px;
+  transition: transform 0.2s ease, filter 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+#sessao-doces2:hover .doces2-imgs:not(:hover) {
+  filter: blur(1.3px);
+}
+
+.doces2-imgs:hover {
+  transform: scale(1.15);
+  filter: none;
+  z-index: 10;
+}
+
+#img6 {
+  background-image: url(img/café1.jpeg);
+  margin-left: 0;
+}
+#img7 {
+  background-image: url(img/café2.jpg);
+}
+#img8 {
+  background-image: url(img/café3.jpeg);
+  margin-right: 0;
+}
+
+.doces3-imgs {
+  width: 23.9%;
+  border-radius: 5px;
+  margin-left: 0.5%;
+  margin-right: 0.5%;
+  transition: transform 0.2s ease, filter 0.3s ease;
+}
+
+#sessao-doces3:hover .doces3-imgs:not(:hover) {
+  filter: blur(1.3px);
+}
+
+.doces3-imgs:hover {
+  transform: scale(1.13);
+  filter: none;
+}
+
+#img9 {
+  background-image: url(img/galeria9.jpg);
+  margin-left: 0;
+}
+#img10 {
+  background-image: url(img/galeria10.jpg);
+}
+#img11 {
+  background-image: url(img/galeria11.jpg);
+}
+#img12 {
+  background-image: url(img/galeria12.jpg);
+  margin-right: 0;
+}
+
+.doces4-imgs {
+  width: 32.3%;
+  margin-left: 0.5%;
+  margin-right: 0.5%;
+  border-radius: 5px;
+  transition: transform 0.2s ease, filter 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+#sessao-doces4:hover .doces4-imgs:not(:hover) {
+  filter: blur(1.3px);
+}
+
+.doces4-imgs:hover {
+  transform: scale(1.15);
+  filter: none;
+  z-index: 10;
+}
+
+#img13 {
+  background-image: url(img/galeria13.jpeg);
+  margin-left: 0;
+}
+#img14 {
+  background-image: url(img/galeria14.jpg);
+}
+#img15 {
+  background-image: url(img/galeria15.jpg);
+  margin-right: 0;
+}
+
+/* contato */
+
+#form-contato {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#form-contato input [type="text"],
+#form-contato input [type="email"],
+#form-contato textarea {
+  display: block;
+  border: none;
+  outline: none;
+  background-color: #ac98953b;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 20px;
+  width: 95.5%;
+  font-size: 16px;
+  font-family: "Poppin", "serif";
+}
+
+#form-contato input {
+  border: none;
+  outline: none;
+  background-color: #ac98953b;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+#form-contato textarea {
+  height: 150px;
+}
+
+#form-contato input:hover {
+  border: 1px solid #ac9794;
+}
+
+#form-contato textarea:hover {
+  border: 1px solid #ac9794;
+}
+
+#form-contato::placeholder {
+  color: #279016;
+}
+
+#form-contato input[type="submit"] {
+  background-color: #ac9794;
+  color: #fff;
+  text-decoration: none;
+  padding: 20px 40px;
+  margin-bottom: 50px;
+  transition: 0.5s;
+  display: block;
+  width: 180px;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  margin-left: 0;
+}
+
+#form-contato input[type="submit"]:hover {
+  background-color: #279016;
+}
+
+/* footer */
+
+footer {
+  height: 50px;
+  color: #ac9794;
+  background-color: #ac9794;
+}
+
+.contact {
+  position: relative;
+  font-weight: bold;
+  margin-left: 300px;
+  padding-top: 15px;
+}
+
+footer a {
+  text-decoration: none;
+  padding-left: 50px;
+}
+
+@media (max-width: 500px) {
+  #sidebar {
+    display: none;
+    opacity: 0;
+    background-color: #ac9794;
+  }
+
+  .content {
+    position: absolute;
+    left: 0;
+    width: 100%;
+  }
+
+  .content h1 {
+    font-size: 26px;
+    text-align: center;
+  }
+
+  .content h2 {
+    font-size: 28px;
+  }
+
+  section {
+    padding-left: 25px !important;
+  }
+
+  /* bem vindo */
+
+  #sessao-bemvindo {
+    padding-left: 0 !important;
+  }
+
+  .sessao-bemvindo-content {
+    padding-left: 25px;
+  }
+
+  #sessao-bemvindo .banner {
+    height: 250px;
+    background-image: url(img/café4.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+
+  .sessao-minibanner {
+    position: relative;
+    width: 55%;
+    height: 350px;
+    left: 20%;
+    background-image: url(img/caféposter.jpg);
+    background-size: cover;
+  }
+
+  #sessao-bemvindo .sessao-descricao {
+    display: none;
+  }
+
+  .sessao-bemvindo-btn,
+  form input [type="submit"] {
+    display: none;
+  }
+
+  #sessao-sobre .sessao-minibanner {
+    display: none;
+  }
+
+  #sessao-sobre .sessao-descricao {
+    position: relative;
+    left: -7%;
+    text-align: center;
+    width: 100%;
+  }
+
+  #sessao-sobre .sessao-descricao .text3 {
+    display: none;
+  }
+
+  /* galerias */
+
+  .banner-galeria {
+    background-position: center;
+    background-size: cover;
+    display: inline-block;
+    height: 200px;
+  }
+
+  h1 {
+    overflow: hidden;
+  }
+
+  h2 {
+    overflow: hidden;
+  }
+
+  img {
+    overflow: hidden;
+  }
+
+  #sessao-doces1,
+  #sessao-doces2,
+  #sessao-doces3,
+  #sessao-doces4 {
+    margin-bottom: 50px;
+    overflow: hidden;
+  }
+
+  .doces1-imgs {
+    width: 55%;
+    margin-left: 30%;
+    margin-bottom: 40px;
+    border-radius: 5px;
+    transition: transform 0.2s ease, filter 0.3s ease;
+  }
+
+  #sessao-doces1:hover .doces1-imgs:not(:hover) {
+    filter: blur(1.3px);
+  }
+
+  .doces1-imgs:hover {
+    transform: scale(1.16);
+    filter: none;
+  }
+
+  #img1 {
+    background-image: url(img/galeria1.jpg);
+    margin-left: 30%;
+  }
+
+  #sessao-doces2 {
+    width: 100%;
+  }
+  .doces2-imgs {
+    width: 25%;
+    margin-left: 0%;
+    margin-right: 0%;
+    border-radius: 5px;
+    transition: transform 0.2s ease, filter 0.3s ease;
+    position: relative;
+    z-index: 1;
+  }
+
+  #sessao-doces2:hover .doces2-imgs:not(:hover) {
+    filter: blur(1.3px);
+  }
+
+  .doces2-imgs:hover {
+    transform: scale(1.15);
+    filter: none;
+    z-index: 10;
+  }
+
+  #img6 {
+    background-image: url(img/café1.jpeg);
+    margin-left: 5%;
+  }
+
+  #sessao-doces3 {
+    width: 100%;
+    margin-left: -3%;
+  }
+
+  .doces3-imgs {
+    width: 45%;
+    position: relative;
+    border-radius: 5px;
+    transition: transform 0.2s ease, filter 0.3s ease;
+    z-index: 1;
+  }
+
+  #sessao-doces3:hover .doces3-imgs:not(:hover) {
+    filter: blur(1.3px);
+  }
+
+  .doces3-imgs:hover {
+    transform: scale(1.13);
+    filter: none;
+    z-index: 10;
+  }
+
+  #sessao-doces4 {
+    width: 100%;
+    margin-left: -1%;
+  }
+
+  .doces4-imgs {
+    width: 28%;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+    border-radius: 5px;
+    transition: transform 0.2s ease, filter 0.3s ease;
+    position: relative;
+    z-index: 1;
+  }
+
+  #sessao-doces4:hover .doces4-imgs:not(:hover) {
+    filter: blur(1.3px);
+  }
+
+  .doces4-imgs:hover {
+    transform: scale(1.15);
+    filter: none;
+    z-index: 10;
+  }
+
+  #form-contato {
+    width: 80%;
+    margin-left: 5%;
+    gap: 20px;
+  }
+
+  footer {
+    height: 12%;
+    width: 100%;
+    color: #ac9794;
+    background-color: #ac9794;
+  }
+
+  .contact {
+    position: relative;
+    font-weight: bold;
+    display: flex;
+    margin-left: 5%;
+  }
+
+  footer a {
+    text-decoration: none;
+  }
+}
