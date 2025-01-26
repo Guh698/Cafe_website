@@ -82,6 +82,7 @@ a {
 
 section {
   padding-left: 50px !important;
+  overflow-y: hidden;
 }
 
 /* bem vindo */
@@ -202,6 +203,12 @@ form input [type="submit"]:hover {
 .doces1-imgs:hover {
   transform: scale(1.16);
   filter: none;
+  border-radius: 0%;
+  z-index: 10;
+}
+
+#sessao-doces1:not(:hover) .doces1-imgs {
+  filter: none;
 }
 
 #img1 {
@@ -240,6 +247,7 @@ form input [type="submit"]:hover {
   transform: scale(1.15);
   filter: none;
   z-index: 10;
+  border-radius: 0%;
 }
 
 #img6 {
@@ -269,6 +277,7 @@ form input [type="submit"]:hover {
 .doces3-imgs:hover {
   transform: scale(1.13);
   filter: none;
+  border-radius: 0%;
 }
 
 #img9 {
@@ -304,6 +313,7 @@ form input [type="submit"]:hover {
   transform: scale(1.15);
   filter: none;
   z-index: 10;
+  border-radius: 0%;
 }
 
 #img13 {
@@ -412,6 +422,16 @@ footer a {
     background-color: #ac9794;
   }
 
+  .logo-doceria {
+    width: 9000px;
+    height: 9000px;
+    display: block;
+    opacity: 1;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .content {
     position: absolute;
     left: 0;
@@ -511,15 +531,26 @@ footer a {
     margin-bottom: 40px;
     border-radius: 5px;
     transition: transform 0.2s ease, filter 0.3s ease;
+    filter: none;
   }
 
   #sessao-doces1:hover .doces1-imgs:not(:hover) {
-    filter: blur(1.3px);
+    filter: none;
   }
 
   .doces1-imgs:hover {
+    transform: none;
+    filter: none;
+  }
+
+  #sessao-doces1.has-clicked .doces1-imgs:not(.clicked) {
+    filter: blur(1.3px);
+  }
+
+  .doces1-imgs.clicked {
     transform: scale(1.16);
     filter: none;
+    z-index: 10;
   }
 
   #img1 {
@@ -530,6 +561,7 @@ footer a {
   #sessao-doces2 {
     width: 100%;
   }
+
   .doces2-imgs {
     width: 25%;
     margin-left: 0%;
@@ -537,15 +569,24 @@ footer a {
     border-radius: 5px;
     transition: transform 0.2s ease, filter 0.3s ease;
     position: relative;
-    z-index: 1;
+    filter: none;
   }
 
   #sessao-doces2:hover .doces2-imgs:not(:hover) {
-    filter: blur(1.3px);
+    filter: none;
   }
 
   .doces2-imgs:hover {
-    transform: scale(1.15);
+    transform: none;
+    filter: none;
+  }
+
+  #sessao-doces2.has-clicked2 .doces2-imgs:not(.clicked2) {
+    filter: blur(1.3px);
+  }
+
+  .doces2-imgs.clicked2 {
+    transform: scale(1.16);
     filter: none;
     z-index: 10;
   }
@@ -569,11 +610,20 @@ footer a {
   }
 
   #sessao-doces3:hover .doces3-imgs:not(:hover) {
-    filter: blur(1.3px);
+    filter: none;
   }
 
   .doces3-imgs:hover {
-    transform: scale(1.13);
+    transform: none;
+    filter: none;
+  }
+
+  #sessao-doces3.has-clicked3 .doces3-imgs:not(.clicked3) {
+    filter: blur(1.3px);
+  }
+
+  .doces3-imgs.clicked3 {
+    transform: scale(1.16);
     filter: none;
     z-index: 10;
   }
@@ -594,11 +644,20 @@ footer a {
   }
 
   #sessao-doces4:hover .doces4-imgs:not(:hover) {
-    filter: blur(1.3px);
+    filter: none;
   }
 
   .doces4-imgs:hover {
-    transform: scale(1.15);
+    transform: none;
+    filter: none;
+  }
+
+  #sessao-doces4.has-clicked4 .doces4-imgs:not(.clicked4) {
+    filter: blur(1.3px);
+  }
+
+  .doces4-imgs.clicked4 {
+    transform: scale(1.16);
     filter: none;
     z-index: 10;
   }
@@ -625,5 +684,34 @@ footer a {
 
   footer a {
     text-decoration: none;
+  }
+
+  .scroll-animate {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+
+  /* Elementos visíveis */
+  .scroll-animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  #welcome {
+    animation: animacao1 1.5s 1s ease-in-out 1 forwards;
+    opacity: 0;
+  }
+
+  @keyframes animacao1 {
+    0% {
+      transform: translateY(300px);
+      opacity: 0;
+    }
+
+    100% {
+      transform: translateY(0px);
+      opacity: 1;
+    }
   }
 }
