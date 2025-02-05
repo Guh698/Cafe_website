@@ -186,7 +186,10 @@ form input [type="submit"]:hover {
 #sessao-doces4 {
   padding-right: 50px;
   margin-bottom: 50px;
+  height: 300px;
 }
+
+
 
 .doces1-imgs {
   width: 18.8%;
@@ -203,7 +206,7 @@ form input [type="submit"]:hover {
 .doces1-imgs:hover {
   transform: scale(1.16);
   filter: none;
-  border-radius: 0%;
+  border-radius: 5px;
   z-index: 10;
 }
 
@@ -247,7 +250,8 @@ form input [type="submit"]:hover {
   transform: scale(1.15);
   filter: none;
   z-index: 10;
-  border-radius: 0%;
+  border-radius: 5px;
+
 }
 
 #img6 {
@@ -277,7 +281,8 @@ form input [type="submit"]:hover {
 .doces3-imgs:hover {
   transform: scale(1.13);
   filter: none;
-  border-radius: 0%;
+  border-radius: 5px;
+
 }
 
 #img9 {
@@ -313,7 +318,8 @@ form input [type="submit"]:hover {
   transform: scale(1.15);
   filter: none;
   z-index: 10;
-  border-radius: 0%;
+  border-radius: 5px;
+
 }
 
 #img13 {
@@ -524,6 +530,15 @@ footer a {
   #sessao-doces4 {
     margin-bottom: 50px;
   }
+
+  #sessao-doces1{
+    height: 100%;
+  }
+
+  #sessao-doces3{
+    height: 500px;
+  }
+
 
   .doces1-imgs {
     width: 55%;
